@@ -1,5 +1,5 @@
-# cegal-ws1502
-Material for Cegal workshop 15.02.2024
+# No TECH Workshop, from Micro Python to Machine Learning with REST
+Material for NO TECH workshop 28.02.2024
   
 The aim for the workshop is to build a Mobile APEX application that consumes sensor data,
 and based on the sensor data applies Machine Learning to create a prediction.
