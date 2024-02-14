@@ -27,13 +27,15 @@ and hoh is null -- ignore the steepest driving up and down mountains
 
 -- Do a select to confirm that it returns data :
 
-select * from mlinput;```
+select * from mlinput;
+```
 
 ## Step 2
 
 Next task is to configure this Machine Learning experiment,  by creating a settings table :
 
-```drop table mlsettingsSVM   -- if exists;
+```
+drop table mlsettingsSVM   -- if exists;
 create table mlsettingsSVM (setting_name varchar2(30), setting_value varchar2(30));
 ```
 
@@ -44,8 +46,9 @@ We will be using Support Vector Machine (SVM) with default parameters - so that 
 Next task is to create and train the model:
 
 First we drop the model - if it already exists - if not ignore: 
-
-```begin
+  
+```
+begin
 dbms_data_mining.drop_model(model_name => 'SVM1');
 end;
 /
@@ -85,10 +88,12 @@ Lets repeat:
 ```
 SELECT prediction (SVM1 using 100 AS kmh,20 AS CELSIUS) FROM DUAL;
 SELECT prediction (SVM1 using 100 AS kmh,10 AS CELSIUS) FROM DUAL;
+```
 
 It looks like the temperature is ignored!
 Let's look at the CREATE VIEW STATEMENT source view:
 
+```
 create or replace view mlinput (ID,KMH,KWP100)
 as (SELECT KMH,KMH,KWP100 FROM trip
 where km>35
@@ -344,7 +349,7 @@ In order to make sure that we are on the right track - let's do a few final anal
 select trip.*,predict_consumption(kmh,celsius),
 abs(predict_consumption(kmh,celsius)-kwp100) 
 from trip
-order by dato,kl
+order by dato,kl;
 ```  
 
 Or if we want to list the predictions, starting with the worst from the top:
@@ -353,7 +358,7 @@ Or if we want to list the predictions, starting with the worst from the top:
 select trip.*,predict_consumption(kmh,celsius),
 abs(predict_consumption(kmh,celsius)-kwp100) 
 from trip
-order by abs(predict_consumption(kmh,celsius)-kwp100) desc
+order by abs(predict_consumption(kmh,celsius)-kwp100) desc;
 ```  
 
 We can probably study the result for hours - to try to understand the data better.
@@ -368,7 +373,7 @@ select 'SVM',sum(abs(predict_consumption_flex(kmh,celsius,'SVM1')-kwp100))
 from trip
 union all
 select 'GLM',sum(abs(predict_consumption_flex(kmh,celsius,'GLM1')-kwp100)) 
-from trip
+from trip;
 ```  
   
 This one excludes short trips, rain/snow and mountain trips  ?
@@ -380,7 +385,7 @@ where km>35 and mm is null and hoh is null
 union all
 select 'GLM',sum(abs(predict_consumption_flex(kmh,celsius,'GLM1')-kwp100)) 
 from trip
-where km>35 and mm is null and hoh is null
+where km>35 and mm is null and hoh is null;
 ```
 
 
