@@ -32,7 +32,12 @@ In this lab we will demonstrate how you easily can add database updates from a t
 ![Autonomous ORDS security Architecture](images/ords-architecture.jpg)
 
 # Using Machine Learning and predictions in Autonomous Database
-
+  
+Machine Learning in Oracle Database supports data exploration, preparation, and machine learning (ML) modeling at scale using SQL, R, Python, REST, automated machine learning (AutoML), and no-code interfaces.  
+- More than 30 high performance in-database algorithms producing models for immediate use in applications. 
+- Keeping data in the database, no need to move or copy data. 
+With Oracle ML organizations can simplify their overall architecture and maintain data synchronization and security. It enables data scientists and other data professionals to build models quickly by simplifying and automating key elements of the machine learning lifecycle. Oracle ML is inlcued in the license of any Oracle Database Edition.
+  
 
 # Workshop goal
 
@@ -90,7 +95,14 @@ During the lab, current_speed may be changed to generate different values in the
   
 As an alternative to usage of an Arduino, a python script is supplied to interactively update the logtable with the /wsapi/tempkmh API  
   
-[Instructions Lab 4](labs/lab4.md)
+### Python desktop lab  
+
+
+[Instructions Lab 4 desktop](labs/lab4-desktop.md) 
+
+### Python Arduino lab  
+
+[Instructions Lab 4 Arduino](labs/lab4-arduino.md) 
 
 ## Workshop part 5
 
