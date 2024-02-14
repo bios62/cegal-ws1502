@@ -8,7 +8,19 @@ The purpose of this lab is to import and run the Oracle APEX application for vie
 
 Completed lab 4 
 
-## Oracle APEX
+## APEX logon and URL  
+
+The URL to the APEX Worksapace is:  
+
+`https://<your ATP instance>.adb.eu-frankfurt-1.oraclecloudapps.com/ords/r/apex/workspace-sign-in/oracle-apex-sign-in?session=106975469353731`
+
+![APEX logon](images/apex_logon.jpg)  
+  
+
+![APEX workspace](images/apex_workspace.jpg)
+
+
+## Build the Oracle APEX application
 
 Go to the "App Builder" and choose the "Import" action.  
 ![APEX App Builder](../images/apex_home.png)

@@ -11,6 +11,11 @@ The real-time temperature and speed is collected via a microcontroller programme
 via REST, the prediction is then visualized and presented to the user on a mobile device with APEX.
 As the IoT world might be dangerous, it is important to protect the database, so only the required REST AP is exposed to the IoT device.
 
+  
+![Workflow diagram](images/lab_flow3.jpg?raw=true "Lab Flow")
+
+  
+
 # Secure communication with Oracle Database over REST
 
 Oracle Data Rest Services, ORDS, is the technology for exposing and updating data in an Oracle Autonomous Database via REST Services.  
@@ -24,14 +29,7 @@ In this lab we will demonstrate how you easily can add database updates from a t
 
 ![Autonomous ORDS security Architecture](images/ords-architecture.jpg)
 
-# Oracle OCI Next Generation Firewall
-
-In interest of time, configuration of the Firewall, and building a complete OCI network with the NGFW is not a part of the lab.
-The architecture can easily be extended run Oracle ATP on a private IP only and filter all ORDS REST API through the NGFW.
-For details please refer to: [OCI Network Firewall](https://docs.oracle.com/en/solutions/oci-network-firewall/index.html#GUID-875E911C-8D7D-4205-952B-5E8FAAD6C6D3)  
-
-![OCI NGFW](images/oci-network-firewall-arch.png)
-
+# Using Machine Learning and predictions in Autonomous Database
 
 
 # Workshop goal
@@ -99,14 +97,6 @@ In this lab you will logon to your apex envrionment and upload an APEX applicati
 You have a predefined APEX workspace, with the same username/password as your database actions username/password
 
 [Instructions Lab 5](labs/lab5.md)  
-The URL to the APEX Worksapace is:  
-
-`https://<your ATP instance>.adb.eu-frankfurt-1.oraclecloudapps.com/ords/r/apex/workspace-sign-in/oracle-apex-sign-in?session=106975469353731`
-
-![APEX logon](images/apex_logon.jpg)  
-  
-
-![APEX workspace](images/apex_workspace.jpg)
 
 ## Workshop part 6
 
