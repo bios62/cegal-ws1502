@@ -13,8 +13,10 @@ As the IoT world might be dangerous, it is important to protect the database, so
 
   
 ![Workflow diagram](images/lab_flow3.jpg?raw=true "Lab Flow")
-
   
+Below is some screenshots from the APEX app we will install:  
+
+![Apex app](images/apex_app.jpg)
 
 # Secure communication with Oracle Database over REST
 
