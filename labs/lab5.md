@@ -14,10 +14,10 @@ The URL to the APEX Worksapace is:
 
 `https://<your ATP instance>.adb.eu-frankfurt-1.oraclecloudapps.com/ords/r/apex/workspace-sign-in/oracle-apex-sign-in?session=106975469353731`
 
-![APEX logon](images/apex_logon.jpg)  
+![APEX logon]../images/apex_logon.jpg)  
   
 
-![APEX workspace](images/apex_workspace.jpg)
+![APEX workspace](../images/apex_workspace.jpg)
 
 
 ## Build the Oracle APEX application
