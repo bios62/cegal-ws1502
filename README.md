@@ -65,12 +65,8 @@ For the lab you may either use a python script where the sensordata is manually 
 In this lab we will create tables and upload training data  
 [Instructions Lab 1](labs/lab1.md)
 
-## Workshop part 2
 
-In this lab you will create the different AI ML models, and test/verify your models  
-[Instructions Lab 2](labs/lab2.md)
-
-##  Workshop part 3
+##  Workshop part 2
 
 Add REST services, for adding current speed and current temp, as basis for predictions    
 
@@ -84,7 +80,13 @@ GET /wsapi/tempkmh
 GET /wsapi/predict?kmh=xxx&temp=xxx
 ```
 
-[Instructions Lab3](labs/lab3.md)
+[Instructions Lab2](labs/lab2.md)
+
+## Workshop part 3
+
+In this lab you will create the different AI ML models, and test/verify your models  
+[Instructions Lab 3](labs/lab3.md)
+
 
 ## Workshop part 4
 
