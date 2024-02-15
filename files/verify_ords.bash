@@ -1,5 +1,5 @@
 #!</bin/bash
-URL=https://hikomo1xnp7z6id-jsonws.adb.eu-frankfurt-1.oraclecloudapps.com
+URL=https://<your ATP URL>
 USER=<your user>
 curl  -X GET -o logdata.json -H 'Content-Type: application/json' ${URL}/ords/${USER}/wsapi/tempkmh
 curl -i -X POST -d '{"kmh":335}' -H 'Content-Type: application/json' ${URL}/ords/${USER}/wsapi/kmh
