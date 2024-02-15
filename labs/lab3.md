@@ -8,7 +8,7 @@ The purpose of this lab is to  build machine learning models to predict consumpt
 
 ## Prerequisites
 
-Complete lab1 and 2 and ensure that 
+Complete lab1 and 2 and ensure that <>
  TRIP table is loaded into the schema.
 
 

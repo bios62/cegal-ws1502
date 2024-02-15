@@ -2,7 +2,7 @@
 
 ## Purpose of lab
 
-The purprose of this lab is to enable ORDS API.
+The purprose of this lab is to build and enable ORDS API.
 The lab will create the following API:
 
 `POST /wsapi/tempkmh`    insert into logdata, payload: `'{kmh:<current speed>,"temp":<current temp>}'`  
@@ -16,18 +16,13 @@ Complete lab 1
 
 ## Instructions
 
-The lab consists of two elements:
-- Load the training data into the trip table
-- Build the ORDS environment
+The lab gives step by step instruction on how to in build the REST APIs.
 
+## Build ORDS REST API with script
 
-## Upload training data for machinelearning
+Copy/paste the script create_ords.sql [](../files/create_ords.sql) into dbactions, and run as script, or do the interactive lab
 
-Locate the file kjoredataV2.xlsx on your cloned git repo
-
-Run the instructions from ![Instructions](dataload.md)
-
-## Create the ORDS REST Envrionment
+## Create the ORDS REST Envrionment interatively
 
 Run the instructions from ![Instructions](ords.md)
 

@@ -1,10 +1,6 @@
 # Lab 3 instructions, Build ORDS REST API
 
 
-## Build ORDS REST API with script
-
-Copy/paste the script create_ords.sql [](../files/create_ords.sql) into dbactions, and run as script, or do the interactive lab
-
 ## Interactive instructions, ORDS creation
 
 Create ORDS module
