@@ -13,8 +13,10 @@ import supervisor
 import gc
 
 
-# Change user number in next line:
-JSON_POST_URL = "https://hikomo1xnp7z6id-jsonws.adb.eu-frankfurt-1.oraclecloudapps.com/ords/user25/wsapi/temp"
+# Add the corret ATP ORDS REST URL
+# Example format https://hirokixxx-mydb.adb.eu-frankfurt-1.oraclecloudapps.com/ords/demouser5/wsapi/temp
+
+JSON_POST_URL = "https://<your ATP URL>/ords/<username>/wsapi/temp"
 
 
 print ("\nstart:")
@@ -59,7 +61,9 @@ while True:
     print(f"Connecting to wifi")
     try:
 	# change wifi SSID and PWD in next line
-        wifi.radio.connect("SSID", "pwd")
+        ssid="MYSSID"
+        pwd="MYPWD"
+        wifi.radio.connect(ssid,pwd)
         connectWiFi = True
     except:
         print("\nConnect to network - failed")

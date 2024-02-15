@@ -1,4 +1,4 @@
-# Lab 4 instructions
+# Lab 4 (desktop) instructions
 
 ## Purpose of lab
 
