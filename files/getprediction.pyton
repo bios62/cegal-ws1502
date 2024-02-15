@@ -17,7 +17,9 @@ def get_prediction(url,kmh,temp):
 def main(argv):
     kmh=argv[1]
     temp=argv[2]
-    url='https://wmddqsjvrtzzsph-adw.adb.eu-frankfurt-1.oraclecloudapps.com/ords/admin/ml/predict/?p_kmh='+str(kmh)+'100&p_temp='+str(temp)
+    api_url='<my url>'    # example https://hirokixxx.atp.eu-frankfurt-1.oraclecloudapps.com/
+    api_user='<my user>'
+    url=f'{api_url}ords/{api_user}/ml/predict/?p_kmh='+str(kmh)+'100&p_temp='+str(temp)
     prediction=get_prediction(url,kmh,temp)
     print("Estimated range: "+prediction)
 

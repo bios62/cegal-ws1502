@@ -2,7 +2,6 @@
 -- Dummy function that generates prediction
 --
 create or replace function predict_consumption(kmh integer,temp in integer) return integer is
-DECLARE  
   kwh number;
   seed integer;
 begin

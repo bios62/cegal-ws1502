@@ -13,14 +13,14 @@ You will get username, password and URL to the autonomous database from the inst
 
 Assume your userid is user25 and your password is password25.  
   
-With the URL to Autnomous like : https://hiokitiiixxxx-jsonws.adb.eu-frankfurt-1.oraclecloudapps.com 
+With the URL to Autnomous like : https://myautonomous.adb.eu-frankfurt-1.oraclecloudapps.com 
 The formal structure of the URL to database actions is:  
 
 `https://<URL to autnomous>/ords/<dbusername>/_sdw/?nav=worksheet`
 
 The URL to database actions, with SQL, ML and ORDS in this example will be:  
   
-`https://hiokitiiixxxx-jsonws.adb.eu-frankfurt-1.oraclecloudapps.com/ords/user25/_sdw/?nav=worksheet`
+`https://myautonomous.adb.eu-frankfurt-1.oraclecloudapps.com/ords/demosuer03/_sdw/?nav=worksheet`
 
 3 tables are needed for the labs:  
  - trip  the data collection used for Machine Learning

@@ -30,31 +30,14 @@ Run the instructions from ![Instructions](ords.md)
 
 ## Verification of the ORDS REST API with curl
 
-```
-#
-# Set default speed if not collected realtime 
-#
-curl -i -X POST -d '{"kmh":33}' -H 'Content-Type: application/json' https://<my adb url>.adb.eu-frankfurt-1.oraclecloudapps.com/ords/user25/wsapi/kmh
-#
-# Add a new record to the logdata table
-# Two versions
-#
-curl -i -X POST -d '{"kmh":34,"temp":17}' -H 'Content-Type: application/json' https://<my adb url>.adb.eu-frankfurt-1.oraclecloudapps.com/ords/user25/wsapi/tempkmh
-curl -i -X POST -d '{"temp":18}' -H 'Content-Type: application/json' https://<my adb url>.adb.eu-frankfurt-1.oraclecloudapps.com/ords/user25/wsapi/temp
-#
-#  Test for the micropyton envrionment, without Content type
-#
-curl -i -X POST -d '{"temp":5}'  https://<my adb url>.adb.eu-frankfurt-1.oraclecloudapps.com/ords/user25/wsapi/temp
-#
-# Fetch the 25 latest samplings
-#
-curl  -X GET -H 'Content-Type: application/json' https://<my adb url>.adb.eu-frankfurt-1.oraclecloudapps.com/ords/user25/wsapi/tempkmh | jq '.'
-#
-# Perform a prediction
-#
-curl  -X GET -H 'Content-Type: application/json' https://<my adb url>.adb.eu-frankfurt-1.oraclecloudapps.com/ords/user25/wsapi/predict?temp=32&speed=85 | jq '.'
+There is a prebuilt script [verify_ords.bash])../files/verify_ords.bash) that can be used for verification  
+Edit the lines with correct values:  
 
 ```
+URL=https://myautonomous.adb.us-phoenix-1.oraclecloudapps.com
+USER=demouser03
+```
+
 ## Test a prediction with python
 
 Edit the script getprediction.pyton and add the correct values for.  
