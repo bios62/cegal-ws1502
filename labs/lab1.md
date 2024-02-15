@@ -32,7 +32,7 @@ Logon and navigate to SQL:
 ![DB Actions](../images/dbactions.jpg)
 
 
-Download the script create_tables.sql and run it from dbactions, eithehr by copy/paste into 
+Download the script create_tables.sql and run it from dbactions, either by copy/paste into 
 sql area and run script, or run from the file    
   
 ![DB Actions](../images/dbactions2.jpg)

@@ -40,9 +40,16 @@ USER=demouser03
 
 ## Test a prediction with python
 
-Edit the script getprediction.pyton and add the correct values for.  
+Edit the script [getprediction.py](../files/getprediction.py) and add the correct values for.  
 
 ```
 atp_url='https://<your ATP URL>'
 atp_username='<your username>'
 ```
+and execute:
+```
+python getprediction.py 86 2.2
+{"result": "40"}
+Estimated range: 40
+```
+

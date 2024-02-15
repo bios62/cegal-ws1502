@@ -101,7 +101,7 @@ During the lab, current_speed may be changed to generate different values in the
 
 or curl:  
 
-'curl -X-POST -d '{"current_speed":75}' -H '{"Content Type":"application/json"}' https:://<your ATP URL>/ords/<your username>/wsapi/speed`
+`curl -X-POST -d '{"current_speed":75}' -H '{"Content Type":"application/json"}' https:://<your ATP URL>/ords/<your username>/wsapi/speed`
 
 or run the python script [](files/)getprediction.pyton
 
@@ -132,7 +132,7 @@ Run APEX app and visualize prediction
 
 ## Links and supporting documentation
 
-[Arduino developer environment] (https://link-url-here.org)https://codewith.mu/)
+![Arduino developer environment] (https://link-url-here.org)https://codewith.mu/)
 
   
 ## Pictures
