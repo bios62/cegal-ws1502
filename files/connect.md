@@ -1,8 +1,5 @@
 ## Connection data
 
   
-URL: https://hikomo1xnp7z6id-jsonws.adb.eu-frankfurt-1.oraclecloudapps.com/ords/user25/_sdw/?nav=worksheet  
-Password: WorkShop1502###  
-Username: user01 --user30  
-
+Contact inge.os2oracle.com if you want to give it a try, and I will send you the URL, username and password
 
