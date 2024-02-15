@@ -20,7 +20,7 @@ The formal structure of the URL to database actions is:
 
 The URL to database actions, with SQL, ML and ORDS in this example will be:  
   
-`jsonws.adb.eu-frankfurt-1.oraclecloudapps.com/ords/user25/_sdw/?nav=worksheet`
+`https://hiokitiiixxxx-jsonws.adb.eu-frankfurt-1.oraclecloudapps.com/ords/user25/_sdw/?nav=worksheet`
 
 3 tables are needed for the labs:  
  - trip  the data collection used for Machine Learning
