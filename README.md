@@ -66,7 +66,14 @@ In this lab we will create tables and upload training data
 [Instructions Lab 1](labs/lab1.md)
 
 
-##  Workshop part 2
+
+## Workshop part 2
+
+In this lab you will create the different AI ML models, and test/verify your models  
+[Instructions Lab 2](labs/lab2.md)
+
+
+##  Workshop part 3
 
 Add REST services, for adding current speed and current temp, as basis for predictions    
 
@@ -80,13 +87,7 @@ GET /wsapi/tempkmh
 GET /wsapi/predict?kmh=xxx&temp=xxx
 ```
 
-[Instructions Lab2](labs/lab2.md)
-
-## Workshop part 3
-
-In this lab you will create the different AI ML models, and test/verify your models  
-[Instructions Lab 3](labs/lab3.md)
-
+[Instructions Lab3](labs/lab3.md)
 
 ## Workshop part 4
 
@@ -95,9 +96,15 @@ In this lab a Arduino based microcontroller for a temp sensor will be used to re
 The Arduino does not have a speed sensor, and the REST API used is /wsapi/temp that supplements the logdata record with the most recent value from the current_speed table.  
 During the lab, current_speed may be changed to generate different values in the logdata table with the simulator
 
-`python simulate.py --url https://<myadb url>/ords/user25/wsapi/temp --speed 75`  
-or curls:  
+
+`python simulate.py --url https://<myadb url>/ords/user25/wsapi/temp --speed 75`    
+
+or curl:  
+
 'curl -X-POST -d '{"current_speed":75}' -H '{"Content Type":"application/json"}' https:://<your ATP URL>/ords/<your username>/wsapi/speed`
+
+or run the python script [](files/)getprediction.pyton
+
   
 As an alternative to usage of an Arduino, a python script is supplied to interactively update the logtable with the /wsapi/tempkmh API  
   

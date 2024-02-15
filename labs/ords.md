@@ -103,7 +103,7 @@ the kmh API ipdates the current_speed table, not the logdata table
 
 ![ORDS Screen](../images/ords20.jpg)  
 
-Create tenplate kmh  
+Create template kmh  
 
 ![ORDS Screen](../images/ords21.jpg)
 
@@ -128,7 +128,7 @@ Predict GET deviates a bit.
 This REST API select ad value with a PL/SQL having two input query parameters  
 
 
-Create tempplate predict  
+Create template predict  
   
 ![ORDS Screen](../images/ords30.jpg)
 
@@ -164,7 +164,7 @@ And the REST API GET predict is complete
 
 As the last API lets create the tempkmh GET api fro retrieving the 25 newest records from the logdata table.
 Note that the API URL is the same as the POST above, but the handler is a GET handler, in reality a new API.
-Navigate back to the temkmh template.  
+Navigate back to the tempkmh template.  
 
 Create template tempkmh GET API 
   
@@ -173,7 +173,7 @@ Create template tempkmh GET API
   
 Select Source type  ords.source_type_collection_feed and add the following SQL in the GET handler:  
    
-select logtime,temp,kmh from logdata order by logtime desc
+`select logtime,temp,kmh from logdata order by logtime desc`
 
 ![ORDS Screen](../images/ords41.jpg)
 
@@ -186,6 +186,10 @@ The creation of tempkmh API complete.
 This completse the creation of the REST API.
 
 A simple test, add the URL to the last GET API in your browser:
+
+`https://<your ATP URL>/ords/<your username>/wsapi/`
+
+and observe the result.
 
 
 
