@@ -1,4 +1,4 @@
-# Lab 32 instructions
+# Lab 2 instructions
 
 ## Purpose of the lab
 
