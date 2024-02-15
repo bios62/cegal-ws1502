@@ -91,7 +91,7 @@ In this lab you will create the different AI ML models, and test/verify your mod
 ## Workshop part 4
 
 Python Lab  
-In this lab a Arduino based microcontrolelr for a temp sensor will be used to report current temp to the logdata table  
+In this lab a Arduino based microcontroller for a temp sensor will be used to report current temp to the logdata table  
 The Arduino does not have a speed sensor, and the REST API used is /wsapi/temp that supplements the logdata record with the most recent value from the current_speed table.  
 During the lab, current_speed may be changed to generate different values in the logdata table with the simulator
 
@@ -106,7 +106,7 @@ As an alternative to usage of an Arduino, a python script is supplied to interac
 
 [Instructions Lab 4 desktop](labs/lab4-desktop.md) 
 
-### Python Microcontroller/Micropython lab  
+### Python Microcontroller/Micropython lab  (Optional, du this lab at the end if time permit)
 
 [Instructions Lab 4 Arduino](labs/lab4-arduino.md) 
 

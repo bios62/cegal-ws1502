@@ -24,8 +24,9 @@ The URL to the APEX Worksapace is:
 
 Go to the "App Builder" and choose the "Import" action.  
 ![APEX App Builder](../images/apex_home.png)
-
-Drag and drop, or select the ![APEX app](files/apex_app.sql) file.  
+  
+Drag and drop, or select the ![APEX app](../files/apex_app.sql) file.    
+  
 ![APEX App Import](../images/apex_import.png)
 
 Install the application  

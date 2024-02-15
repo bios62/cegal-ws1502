@@ -1,4 +1,4 @@
-# Lab 3 instructions, dataload
+# Dataload, load trainingdata from Excel with Database actions  
 
 Navigate to Database Actions and click on data load
 
