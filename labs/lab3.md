@@ -19,7 +19,8 @@ First we need to create the source - for this we will create a view on top of th
 
 ## Step 1
 
-```create or replace view mlinput (ID,KMH,KWP100)as (
+```
+create or replace view mlinput (ID,KMH,KWP100)as (
 SELECT KMH,KMH,KWP100 FROM trip
 where km>35 -- ignore short drives where initial car heating can disturb.
 and mm is null -- ignore drives with rain/snow 
