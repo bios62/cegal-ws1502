@@ -157,7 +157,7 @@ END;
 BEGIN
     ORDS.DEFINE_HANDLER(
         p_module_name => 'workshop',
-        p_pattern => 'predic/',
+        p_pattern => 'predict',
         p_method => 'GET',
         p_source_type => ords.source_type_plsql,
         p_source => 'begin :p_result:=predict_consumption(:p_kmh,:p_temp); end;',
