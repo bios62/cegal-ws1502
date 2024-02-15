@@ -139,7 +139,7 @@ END;
 /
 --
 --  DEFINE TEMPLATE predict, API for GET new prediction
--
+--
 BEGIN
     ORDS.DEFINE_TEMPLATE(
         p_module_name => 'workshop',
