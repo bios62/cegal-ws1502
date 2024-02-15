@@ -61,7 +61,8 @@ Well done, first API created, navigate back to "workshop"
   
 ![ORDS Screen 14](../images/ords14.jpg)
   
-Repeat the steps for creating the temp REST API with POST  
+Repeat the steps for creating the temp REST API with POST,but do not add MIMEs allowed.  
+
 
 ![ORDS Screen](../images/ords15.jpg)
 
@@ -73,9 +74,11 @@ Enter the PL/SQL below in the handler:
 
 `begin insert into logdata (temp) values(:temp); commit; end;` 
 
-![ORDS Screen](../images/ords17.jpg)
+![ORDS Screen](../images/ords17.jpg)  
 
-![ORDS Screen](../images/ords18.jpg)
+The micropython implementation does not support setting header variables like "Content Type", and the REST API need
+to discard lack of MIME type. Skip setting of MIMEs allowed for this API
+
 
 The REST API temp is added. 
 

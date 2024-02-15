@@ -89,9 +89,13 @@ GET /wsapi/predict?kmh=xxx&temp=xxx
 ## Workshop part 4
 
 Python Lab  
-In this lab the Arduino temp sensor will be used to report current temp to the logdata table  
+In this lab a Arduino based microcontrolelr for a temp sensor will be used to report current temp to the logdata table  
 The Arduino does not have a speed sensor, and the REST API used is /wsapi/temp that supplements the logdata record with the most recent value from the current_speed table.  
-During the lab, current_speed may be changed to generate different values in the logdata table  
+During the lab, current_speed may be changed to generate different values in the logdata table with the simulator
+
+`python simulate.py --url https://<myadb url>/ords/user25/wsapi/temp --speed 75`  
+or curls:  
+'curl -X-POST -d '{"current_speed":75}' -H '{"Content Type":"application/json"}' https:://<your ATP URL>/ords/<your username>/wsapi/speed`
   
 As an alternative to usage of an Arduino, a python script is supplied to interactively update the logtable with the /wsapi/tempkmh API  
   
@@ -100,7 +104,7 @@ As an alternative to usage of an Arduino, a python script is supplied to interac
 
 [Instructions Lab 4 desktop](labs/lab4-desktop.md) 
 
-### Python Arduino lab  
+### Python Microcontroller/Micropython lab  
 
 [Instructions Lab 4 Arduino](labs/lab4-arduino.md) 
 

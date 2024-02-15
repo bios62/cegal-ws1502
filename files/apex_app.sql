@@ -33,14 +33,14 @@ prompt APPLICATION 100 - Workshop
 -- Application Export:
 --   Application:     100
 --   Name:            Workshop
---   Date and Time:   14:38 Wednesday February 14, 2024
+--   Date and Time:   09:54 Thursday February 15, 2024
 --   Exported By:     JORGEN
 --   Flashback:       0
 --   Export Type:     Application Export
---     Pages:                     11
+--     Pages:                     10
 --       Items:                    8
 --       Processes:                7
---       Regions:                 14
+--       Regions:                 12
 --       Buttons:                  2
 --       Dynamic Actions:          3
 --     Shared Components:
@@ -49,7 +49,7 @@ prompt APPLICATION 100 - Workshop
 --       Navigation:
 --         Lists:                  4
 --         Breadcrumbs:            1
---           Entries:              5
+--           Entries:              4
 --       Security:
 --         Authentication:         1
 --         Authorization:          1
@@ -118,7 +118,7 @@ wwv_imp_workspace.create_flow(
 ,p_substitution_string_01=>'APP_NAME'
 ,p_substitution_value_01=>'Workshop'
 ,p_last_updated_by=>'JORGEN'
-,p_last_upd_yyyymmddhh24miss=>'20240214143653'
+,p_last_upd_yyyymmddhh24miss=>'20240215091537'
 ,p_file_prefix => nvl(wwv_flow_application_install.get_static_app_file_prefix,'')
 ,p_files_version=>16
 ,p_print_server_type=>'NATIVE'
@@ -12926,12 +12926,6 @@ wwv_flow_imp_shared.create_menu_option(
 ,p_short_name=>'Estimer forbruk'
 ,p_link=>'f?p=&APP_ID.:3:&APP_SESSION.::&DEBUG.:::'
 ,p_page_id=>3
-);
-wwv_flow_imp_shared.create_menu_option(
- p_id=>wwv_flow_imp.id(21572875602303511)
-,p_short_name=>'Graf'
-,p_link=>'f?p=&APP_ID.:4:&APP_SESSION.::&DEBUG.:::'
-,p_page_id=>4
 );
 wwv_flow_imp_shared.create_menu_option(
  p_id=>wwv_flow_imp.id(23022409495545343)
@@ -31136,149 +31130,6 @@ wwv_flow_imp_page.create_page_da_action(
 );
 end;
 /
-prompt --application/pages/page_00004
-begin
-wwv_flow_imp_page.create_page(
- p_id=>4
-,p_name=>'Graf'
-,p_alias=>'GRAF'
-,p_step_title=>'Graf'
-,p_autocomplete_on_off=>'OFF'
-,p_page_template_options=>'#DEFAULT#'
-,p_protection_level=>'C'
-,p_page_component_map=>'04'
-,p_last_updated_by=>'JORGEN'
-,p_last_upd_yyyymmddhh24miss=>'20240205074423'
-);
-wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(21572483547303510)
-,p_plug_name=>'Breadcrumb'
-,p_region_template_options=>'#DEFAULT#:t-BreadcrumbRegion--useBreadcrumbTitle'
-,p_component_template_options=>'#DEFAULT#'
-,p_plug_template=>wwv_flow_imp.id(21353414784894312)
-,p_plug_display_sequence=>10
-,p_plug_display_point=>'REGION_POSITION_01'
-,p_menu_id=>wwv_flow_imp.id(21237760031894243)
-,p_plug_source_type=>'NATIVE_BREADCRUMB'
-,p_menu_template_id=>wwv_flow_imp.id(21415806807894353)
-);
-wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(21573081629303514)
-,p_plug_name=>'Graf'
-,p_region_template_options=>'#DEFAULT#:t-Region--scrollBody'
-,p_plug_template=>wwv_flow_imp.id(21341061831894306)
-,p_plug_display_sequence=>10
-,p_plug_source_type=>'NATIVE_JET_CHART'
-);
-wwv_flow_imp_page.create_jet_chart(
- p_id=>wwv_flow_imp.id(21573396977303514)
-,p_region_id=>wwv_flow_imp.id(21573081629303514)
-,p_chart_type=>'line'
-,p_height=>'400'
-,p_animation_on_display=>'auto'
-,p_animation_on_data_change=>'auto'
-,p_orientation=>'vertical'
-,p_data_cursor=>'auto'
-,p_data_cursor_behavior=>'auto'
-,p_hover_behavior=>'dim'
-,p_stack=>'off'
-,p_stack_label=>'off'
-,p_connect_nulls=>'Y'
-,p_value_position=>'auto'
-,p_sorting=>'label-asc'
-,p_fill_multi_series_gaps=>true
-,p_zoom_and_scroll=>'off'
-,p_tooltip_rendered=>'Y'
-,p_show_series_name=>true
-,p_show_group_name=>true
-,p_show_value=>true
-,p_show_label=>true
-,p_show_row=>true
-,p_show_start=>true
-,p_show_end=>true
-,p_show_progress=>true
-,p_show_baseline=>true
-,p_legend_rendered=>'off'
-,p_legend_position=>'auto'
-,p_overview_rendered=>'off'
-,p_horizontal_grid=>'auto'
-,p_vertical_grid=>'auto'
-,p_gauge_orientation=>'circular'
-,p_gauge_plot_area=>'on'
-,p_show_gauge_value=>true
-);
-wwv_flow_imp_page.create_jet_chart_series(
- p_id=>wwv_flow_imp.id(21575039463303646)
-,p_chart_id=>wwv_flow_imp.id(21573396977303514)
-,p_seq=>10
-,p_name=>'Series 1'
-,p_data_source_type=>'SQL'
-,p_data_source=>wwv_flow_string.join(wwv_flow_t_varchar2(
-'select *',
-'from frode.trip',
-'order by kmh asc'))
-,p_items_value_column_name=>'KWP100'
-,p_group_short_desc_column_name=>'KMH'
-,p_items_label_column_name=>'KMH'
-,p_line_style=>'solid'
-,p_line_type=>'auto'
-,p_marker_rendered=>'auto'
-,p_marker_shape=>'auto'
-,p_assigned_to_y2=>'off'
-,p_items_label_rendered=>true
-,p_items_label_position=>'auto'
-,p_items_label_display_as=>'PERCENT'
-,p_threshold_display=>'onIndicator'
-);
-wwv_flow_imp_page.create_jet_chart_axis(
- p_id=>wwv_flow_imp.id(21573902403303539)
-,p_chart_id=>wwv_flow_imp.id(21573396977303514)
-,p_axis=>'x'
-,p_is_rendered=>'on'
-,p_title=>'KM/H'
-,p_format_scaling=>'auto'
-,p_scaling=>'linear'
-,p_baseline_scaling=>'zero'
-,p_major_tick_rendered=>'auto'
-,p_minor_tick_rendered=>'auto'
-,p_tick_label_rendered=>'on'
-,p_tick_label_rotation=>'auto'
-,p_tick_label_position=>'outside'
-,p_zoom_order_seconds=>false
-,p_zoom_order_minutes=>false
-,p_zoom_order_hours=>false
-,p_zoom_order_days=>false
-,p_zoom_order_weeks=>false
-,p_zoom_order_months=>false
-,p_zoom_order_quarters=>false
-,p_zoom_order_years=>false
-);
-wwv_flow_imp_page.create_jet_chart_axis(
- p_id=>wwv_flow_imp.id(21574542026303646)
-,p_chart_id=>wwv_flow_imp.id(21573396977303514)
-,p_axis=>'y'
-,p_is_rendered=>'on'
-,p_title=>'KW/100km'
-,p_format_type=>'decimal'
-,p_decimal_places=>0
-,p_format_scaling=>'none'
-,p_scaling=>'linear'
-,p_baseline_scaling=>'zero'
-,p_position=>'auto'
-,p_major_tick_rendered=>'auto'
-,p_minor_tick_rendered=>'auto'
-,p_tick_label_rendered=>'on'
-,p_zoom_order_seconds=>false
-,p_zoom_order_minutes=>false
-,p_zoom_order_hours=>false
-,p_zoom_order_days=>false
-,p_zoom_order_weeks=>false
-,p_zoom_order_months=>false
-,p_zoom_order_quarters=>false
-,p_zoom_order_years=>false
-);
-end;
-/
 prompt --application/pages/page_00005
 begin
 wwv_flow_imp_page.create_page(
@@ -31326,16 +31177,17 @@ unistr('                        message:    "Noe gikk galt ved henting av siste 
 '        apex.server.process(',
 '            ''FETCH_LATEST_VALUE'', {},',
 '            {',
-'                success: (response) => {                    ',
-'                    //let random = parseFloat(Math.random() * (100 - 0) + 0).toFixed(2);',
+'                success: (response) => {   ',
 '',
 '                    if (last.time !== response.time || last.temp !== response.temp || last.kmh !== response.kmh || last.latest_value !== response.latest_value) {',
+'                        console.log(''not the same, send push'');',
 '                        last = response;',
 '',
 '                        gauge.setAttribute(''value'', response.latest_value);',
-'                                                ',
+'',
+'                        // Moved to trigger                ',
 '                        // Send push notification',
-'                        apex.server.process(',
+'                        /*apex.server.process(',
 '                            ''SEND_PUSH_NOTIFICATION'', {',
 unistr('                                x01: `${response.time} - ${response.temp}\00B0C / ${response.kmh}km/h => ${response.latest_value}`'),
 '                            },',
@@ -31348,7 +31200,8 @@ unistr('                                x01: `${response.time} - ${response.temp
 '                                    // console.log(errorThrown)',
 '                                }',
 '                            }',
-'                        ); ',
+'                        );*/',
+'',
 '                        malinger.innerHTML = `<p><b>${response.time}</b> - <b>${response.temp}</b>&#8451; / <b>${response.kmh}</b>km/h &#8594; <b>${response.latest_value}</b></p>` + malinger.innerHTML;',
 '                    }',
 '                },',
@@ -31380,7 +31233,7 @@ unistr('                            message:    "Noe gikk galt ved henting av si
 ,p_protection_level=>'C'
 ,p_page_component_map=>'25'
 ,p_last_updated_by=>'JORGEN'
-,p_last_upd_yyyymmddhh24miss=>'20240212071435'
+,p_last_upd_yyyymmddhh24miss=>'20240215091537'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(21561475159013740)
@@ -31557,7 +31410,7 @@ wwv_flow_imp_page.create_page(
 ,p_protection_level=>'C'
 ,p_page_component_map=>'19'
 ,p_last_updated_by=>'JORGEN'
-,p_last_upd_yyyymmddhh24miss=>'20240214143653'
+,p_last_upd_yyyymmddhh24miss=>'20240214144722'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(9845536280750422)
@@ -31579,7 +31432,10 @@ wwv_flow_imp_page.create_map_region(
 ,p_tilelayer_name_dark=>'osm-dark-matter'
 ,p_navigation_bar_type=>'SMALL'
 ,p_navigation_bar_position=>'END'
-,p_init_position_zoom_type=>'QUERY_RESULTS'
+,p_init_position_zoom_type=>'STATIC'
+,p_init_position_lon_static=>'0'
+,p_init_position_lat_static=>'0'
+,p_init_zoomlevel_static=>'2'
 ,p_layer_messages_position=>'BELOW'
 ,p_show_legend=>false
 ,p_features=>'MOUSEWHEEL_ZOOM:INFINITE_MAP'
